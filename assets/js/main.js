@@ -25,30 +25,32 @@ panel.setAttribute('aria-expanded', isExpanded);
 });
 });
 
-// validacao adm login teste
 
-function login(){
+// function login(){
 
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+//     var email = document.getElementById('emailLogin').value;
+//     var password = document.getElementById('passwordLogin').value;
 
-    firebase.auth().signInWithEmailAndPassword(email, password).then(respose =>{
-        console.log('sucesso', respose)
-        location.href = "./pages/feed.html";
-    }).catch(error => {
-        console.log('erro',error)
-    })
+//     firebase.auth().signInWithEmailAndPassword(email, password).then(respose =>{
+//         console.log('sucesso', respose)
+//         location.href = "./pages/feed.html";
+//     }).catch(error => {
+//         console.log('erro',error)
+//     })
 
+//     // function validateEmail(email) {
+//     //     return /\S+@\S+\.\S+/.test(email);
+//     // }
 
+//     // if(email == "joyce@gmail.com" && password == "01234567"){
+//     //     alert('Sucesso');
 
-    // if(email == "joyce@gmail.com" && password == "01234567"){
-    //     alert('Sucesso');
+//     // }else{
+//     //     alert('Usuario ou senha incorretos');
+//     // }
 
-    // }else{
-    //     alert('Usuario ou senha incorretos');
-    // }
+// }
 
-}
 
 
 // Obtém os elementos do perfil
@@ -116,4 +118,6 @@ file.addEventListener('change', () => {
 
     reader.readAsDataURL(file.files[0]);
 });
+
+
 

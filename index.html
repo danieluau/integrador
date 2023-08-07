@@ -59,25 +59,26 @@
         <form>
 
             <label for="email"></label>
-            <input id="email" type="email" name="email" placeholder="Digite o seu e-mail" required maxlength="40" autofocus>
+            <input id="emailLogin" type="email" name="email" placeholder="seu@email.com" onchange=" validadeFields()" required maxlength="40" autofocus >
             
             <label for="password"></label>
-            <input id="password" type="password" name="password" placeholder="Digite a sua senha" required maxlength="8" minlength="8" autofocus>
+            <input id="passwordLogin" type="password" name="password" placeholder="senha"  onchange=" validadeFields()" required maxlength="8" minlength="8" autofocus>
 
 
-            <input type="submit" value="Entrar"  onclick="login(); return false">
+            <input type="submit" id= "login-button" value="Entrar" onclick="login(); return false">
 
         </form>
     
         <br>
         <p>Ainda não possui uma conta?</p> <!--link para conta-->
         <p><a href="pages/registro.html">Crie uma conta!</a></p>
-        <p><a href="pages/esqueceu.html">Esqueci a senha</a></p>
+        <p><a id = 'esqueceu' href="pages/esqueceu.html" >Esqueci a senha</a></p>
 
         
     </div>
     
     </section>  
+    <script src="assets/js/validate.js"></script>
     <script src="assets/js/main.js"></script>
     <script src= "https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
     <script src= "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js"></script>
