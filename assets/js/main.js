@@ -27,17 +27,26 @@ panel.setAttribute('aria-expanded', isExpanded);
 
 // validacao adm login teste
 
-function Logar(){
+function login(){
 
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
 
-    if(email == "joyce@gmail.com" && password == "01234567"){
-        alert('Sucesso');
-        location.href = "/pages/profile.html";
-    }else{
-        alert('Usuario ou senha incorretos');
-    }
+    firebase.auth().signInWithEmailAndPassword(email, password).then(respose =>{
+        console.log('sucesso', respose)
+        location.href = "./pages/feed.html";
+    }).catch(error => {
+        console.log('erro',error)
+    })
+
+
+
+    // if(email == "joyce@gmail.com" && password == "01234567"){
+    //     alert('Sucesso');
+
+    // }else{
+    //     alert('Usuario ou senha incorretos');
+    // }
 
 }
 
