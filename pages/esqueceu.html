@@ -48,9 +48,12 @@
         <form>
 
             <label for="email"></label>
-            <input id="email" type="email" name="email" placeholder="Digite o seu e-mail" required maxlength="40" autofocus>
+            <input id="emailRecover" type="email" name="email" placeholder="Digite o seu e-mail" required maxlength="40" autofocus>
 
-            <input type="submit" value="Confirmar">
+
+            <button type="button" class= "solid" id="reenviar-email-password-button" onclick="recoverPassword()" >enviar email</button>
+
+            
 
         </form>
     
@@ -61,6 +64,7 @@
     
     </section>  
     <script src="../assets/js/main.js"></script>
+    <script src="assets/js/validate.js"></script>
 </body><!-- corpo-->
 
 </html>

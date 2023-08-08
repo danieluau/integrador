@@ -233,3 +233,34 @@ nav .menu-btn i{
         color: #0a19a0;
     }   
 }
+
+button{
+    margin: 3px;
+    margin-top:10px;
+	background-color: #fff;
+	padding-left: 10px;
+	color: #000000;
+	border: none ;
+	height:30px;
+	outline: none;
+	border-radius: 8px;
+	cursor: pointer;
+	box-shadow: 2px 2px 6px #0000007c;
+}
+
+#login-button {
+    display: block;
+	background-color: #1457ae;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+    color: #ffffff;
+}
+
+#register-account-button{
+    font-size: 16px;
+}
+#recover-password-button {
+    font-size: 16px;
+}

@@ -1,9 +1,8 @@
 
-    function login(){
+function login(){
 
-        const email = form.email().value;
-        const password = form.password().value;
-    
+    const email = form.email().value;
+    const password = form.password().value;
         firebase.auth().signInWithEmailAndPassword(email, password).then(respose =>{
             console.log('sucesso', respose)
             window.location.href= "./pages/feed.html"
@@ -13,7 +12,16 @@
             console.log('erro',error)
         })
 
-    }
+}
+
+
+function recoverPassword(){
+    firebase.auth().sendPasswordResetEmail(form.email().value).then(() =>{
+        alert("email enviado");
+    }).catch (error => {
+        alert(getErrorMessage(error));
+    }); 
+}
 
 
 function getErrorMessage(error){
@@ -27,13 +35,11 @@ function register(){
     window.location.href = "./pages/registro.html";
 }
 
-function recover(){
-    window.location.href = "./pages/esqueceu.html";
-}
+// function recover(){
+//     window.location.href = "./pages/esqueceu.html";
+// }
 
-function recoverPassword(){
-    
-}
+
 
 function validateFields(){
     const emailValid = isEmailValid();
@@ -66,7 +72,8 @@ function validateEmail(email) {
 
 const form = {
     email: ()=> document.getElementById("email"),
-    password: ()=> document.getElementById("password") 
+    password: ()=> document.getElementById("password"),
+    // emailRecover: ()=> document.getElementById("emailRecover"),
 }
 
 // validacao adm login teste
