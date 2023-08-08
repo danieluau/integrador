@@ -26,17 +26,7 @@ panel.setAttribute('aria-expanded', isExpanded);
 });
 
 
-// function login(){
 
-//     var email = document.getElementById('emailLogin').value;
-//     var password = document.getElementById('passwordLogin').value;
-
-//     firebase.auth().signInWithEmailAndPassword(email, password).then(respose =>{
-//         console.log('sucesso', respose)
-//         location.href = "./pages/feed.html";
-//     }).catch(error => {
-//         console.log('erro',error)
-//     })
 
 //     // function validateEmail(email) {
 //     //     return /\S+@\S+\.\S+/.test(email);

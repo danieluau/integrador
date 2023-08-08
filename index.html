@@ -59,19 +59,23 @@
         <form>
 
             <label for="email"></label>
-            <input id="emailLogin" type="email" name="email" placeholder="seu@email.com" onchange=" validadeFields()" required maxlength="40" autofocus >
+            <input type="email" name="email" id="email" onchange=" validateFields()" placeholder="seu@email.com">
             
             <label for="password"></label>
-            <input id="passwordLogin" type="password" name="password" placeholder="senha"  onchange=" validadeFields()" required maxlength="8" minlength="8" autofocus>
+            <input type="password" name="password" id="password"  onchange=" validateFields()" placeholder="senha"  >
+            <br>
 
 
-            <input type="submit" id= "login-button" value="Entrar" onclick="login(); return false">
+
+            <!-- tive de transformar em botoes pra consegui fazer as funçoes de login etc -->
+            <button type="button" class= "solid" id="login-button" disabled="true" onclick="login()">entrar</button>
+            <button type="button" class= "solid" id="register-account-button" onclick="register()" >criar uma conta</button>
+            <button type="button" class= "solid" id="recover-password-button"  onclick="recover()" >recuperar senha</button>
+
 
         </form>
     
-        <br>
-        <p>Ainda não possui uma conta?</p> <!--link para conta-->
-        <p><a href="pages/registro.html">Crie uma conta!</a></p>
+        <p>esqueceu a senha?</p> <!--link para conta-->
         <p><a id = 'esqueceu' href="pages/esqueceu.html" >Esqueci a senha</a></p>
 
         
