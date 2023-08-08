@@ -25,8 +25,14 @@ function recoverPassword(){
 
 
 function getErrorMessage(error){
-    if (error.code === "auth/user-not-found"){
+    if (error.code == "auth/user-not-found"){
         return "usuario nao encontrado"
+    }
+    if (error.code == "auth/missing-password") {
+        return"digite a senha"
+    }
+    if (error.code == "auth/wrong-password") {
+        return"senha incorreta"
     }
     return error.message;
 }
